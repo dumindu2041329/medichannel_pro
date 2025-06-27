@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Patient Health Portal - MediChannel Pro</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fmedichanne1692back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.5"></script>
+</head>
+<body class="bg-background font-inter">
+    <!-- Navigation Header -->
+    <header class="bg-white shadow-sm border-b border-border-light sticky top-0 z-50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <svg class="h-8 w-8 text-primary" viewBox="0 0 32 32" fill="currentColor">
+                            <path d="M16 2C8.268 2 2 8.268 2 16s6.268 14 14 14 14-6.268 14-14S23.732 2 16 2zm0 6c1.105 0 2 .895 2 2s-.895 2-2 2-2-.895-2-2 .895-2 2-2zm4 16h-8v-2h2v-6h-2v-2h6v8h2v2z"/>
+                        </svg>
+                    </div>
+                    <div class="ml-3">
+                        <h1 class="text-xl font-bold text-text-primary">MediChannel Pro</h1>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="homepage_healthcare_platform.html" class="text-text-secondary hover:text-primary px-3 py-2 rounded-md text-sm transition-colors">Home</a>
+                        <a href="provider_search_directory.html" class="text-text-secondary hover:text-primary px-3 py-2 rounded-md text-sm transition-colors">Find Doctors</a>
+                        <a href="appointment_management_dashboard.html" class="text-text-secondary hover:text-primary px-3 py-2 rounded-md text-sm transition-colors">Appointments</a>
+                        <a href="telemedicine_center.html" class="text-text-secondary hover:text-primary px-3 py-2 rounded-md text-sm transition-colors">Telemedicine</a>
+                        <a href="patient_health_portal.html" class="text-primary font-medium px-3 py-2 rounded-md text-sm">Health Portal</a>
+                        <a href="payment_insurance_hub.html" class="text-text-secondary hover:text-primary px-3 py-2 rounded-md text-sm transition-colors">Billing</a>
+                    </div>
+                </div>
+
+                <!-- User Profile -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <div class="relative">
+                        <button class="flex items-center text-text-secondary hover:text-primary p-2 rounded-md transition-colors">
+                            <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-5 5-5-5h5v-12"/>
+                            </svg>
+                            <span class="text-sm font-medium">Sarah Johnson</span>
+                        </button>
+                    </div>
+                    <button class="text-text-secondary hover:text-primary p-2 rounded-md transition-colors">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button type="button" class="text-text-secondary hover:text-primary p-2 rounded-md">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- Page Header -->
+        <div class="mb-8">
+            <div class="flex items-center justify-between">
+                <div>
+                    <h1 class="text-3xl font-bold text-text-primary">Health Portal</h1>
+                    <p class="text-text-secondary mt-2">Manage your health information and track your wellness journey</p>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button class="bg-success text-white px-4 py-2 rounded-lg font-medium transition-colors hover:bg-success-600">
+                        <svg class="w-5 h-5 mr-2 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                        </svg>
+                        Add Record
+                    </button>
+                    <button class="text-text-secondary hover:text-primary p-2 rounded-md transition-colors">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Health Overview Dashboard -->
+        <section class="mb-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Health Score Card -->
+                <div class="card-elevated">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-text-secondary text-sm font-medium">Health Score</p>
+                            <p class="text-3xl font-bold text-success mt-1">85</p>
+                            <p class="text-success text-sm mt-1">+5 from last month</p>
+                        </div>
+                        <div class="bg-success-50 rounded-full w-12 h-12 flex items-center justify-center">
+                            <svg class="w-6 h-6 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Active Medications -->
+                <div class="card-elevated">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-text-secondary text-sm font-medium">Active Medications</p>
+                            <p class="text-3xl font-bold text-text-primary mt-1">4</p>
+                            <p class="text-warning text-sm mt-1">2 refills due</p>
+                        </div>
+                        <div class="bg-accent-50 rounded-full w-12 h-12 flex items-center justify-center">
+                            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Upcoming Appointments -->
+                <div class="card-elevated">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-text-secondary text-sm font-medium">Next Appointment</p>
+                            <p class="text-lg font-semibold text-text-primary mt-1">Dec 28</p>
+                            <p class="text-text-secondary text-sm mt-1">Dr. Sarah Johnson</p>
+                        </div>
+                        <div class="bg-primary-50 rounded-full w-12 h-12 flex items-center justify-center">
+                            <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Health Alerts -->
+                <div class="card-elevated">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-text-secondary text-sm font-medium">Health Alerts</p>
+                            <p class="text-3xl font-bold text-error mt-1">1</p>
+                            <p class="text-error text-sm mt-1">Lab results ready</p>
+                        </div>
+                        <div class="bg-error-50 rounded-full w-12 h-12 flex items-center justify-center">
+                            <svg class="w-6 h-6 text-error" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Left Column - Medical Records & Documents -->
+            <div class="lg:col-span-2 space-y-8">
+                <!-- Recent Test Results -->
+                <section class="card-elevated">
+                    <div class="flex items-center justify-between mb-6">
+                        <h2 class="text-xl font-semibold text-text-primary">Recent Test Results</h2>
+                        <button class="text-primary hover:text-primary-700 text-sm font-medium transition-colors">View All</button>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <!-- Test Result Item -->
+                        <div class="flex items-center justify-between p-4 bg-white rounded-lg border border-border-light">
+                            <div class="flex items-center">
+                                <div class="bg-success-50 rounded-full w-10 h-10 flex items-center justify-center mr-4">
+                                    <svg class="w-5 h-5 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-text-primary">Complete Blood Count</h3>
+                                    <p class="text-text-secondary text-sm">Dec 20, 2024 • Dr. Michael Chen</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <span class="bg-success-100 text-success px-3 py-1 rounded-full text-sm font-medium">Normal</span>
+                                <button class="text-primary hover:text-primary-700 transition-colors">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Test Result Item -->
+                        <div class="flex items-center justify-between p-4 bg-white rounded-lg border border-border-light">
+                            <div class="flex items-center">
+                                <div class="bg-warning-50 rounded-full w-10 h-10 flex items-center justify-center mr-4">
+                                    <svg class="w-5 h-5 text-warning" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-text-primary">Cholesterol Panel</h3>
+                                    <p class="text-text-secondary text-sm">Dec 18, 2024 • Dr. Sarah Johnson</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <span class="bg-warning-100 text-warning px-3 py-1 rounded-full text-sm font-medium">Elevated</span>
+                                <button class="text-primary hover:text-primary-700 transition-colors">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Document Management -->
+                <section class="card-elevated">
+                    <div class="flex items-center justify-between mb-6">
+                        <h2 class="text-xl font-semibold text-text-primary">Medical Documents</h2>
+                        <button class="btn-primary">
+                            <svg class="w-4 h-4 mr-2 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+                            </svg>
+                            Upload Document
+                        </button>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <!-- Document Item -->
+                        <div class="flex items-center p-4 bg-white rounded-lg border border-border-light hover:shadow-md transition-shadow">
+                            <div class="bg-primary-50 rounded-lg w-12 h-12 flex items-center justify-center mr-4">
+                                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="font-semibold text-text-primary">Insurance Card</h3>
+                                <p class="text-text-secondary text-sm">Updated Dec 15, 2024</p>
+                            </div>
+                            <button class="text-text-secondary hover:text-primary transition-colors">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"/>
+                                </svg>
+                            </button>
+                        </div>
+
+                        <!-- Document Item -->
+                        <div class="flex items-center p-4 bg-white rounded-lg border border-border-light hover:shadow-md transition-shadow">
+                            <div class="bg-success-50 rounded-lg w-12 h-12 flex items-center justify-center mr-4">
+                                <svg class="w-6 h-6 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="font-semibold text-text-primary">Vaccination Record</h3>
+                                <p class="text-text-secondary text-sm">Updated Nov 28, 2024</p>
+                            </div>
+                            <button class="text-text-secondary hover:text-primary transition-colors">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"/>
+                                </svg>
+                            </button>
+                        </div>
+
+                        <!-- Document Item -->
+                        <div class="flex items-center p-4 bg-white rounded-lg border border-border-light hover:shadow-md transition-shadow">
+                            <div class="bg-accent-50 rounded-lg w-12 h-12 flex items-center justify-center mr-4">
+                                <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="font-semibold text-text-primary">X-Ray Results</h3>
+                                <p class="text-text-secondary text-sm">Dec 10, 2024</p>
+                            </div>
+                            <button class="text-text-secondary hover:text-primary transition-colors">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"/>
+                                </svg>
+                            </button>
+                        </div>
+
+                        <!-- Document Item -->
+                        <div class="flex items-center p-4 bg-white rounded-lg border border-border-light hover:shadow-md transition-shadow">
+                            <div class="bg-secondary-50 rounded-lg w-12 h-12 flex items-center justify-center mr-4">
+                                <svg class="w-6 h-6 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="font-semibold text-text-primary">Discharge Summary</h3>
+                                <p class="text-text-secondary text-sm">Nov 15, 2024</p>
+                            </div>
+                            <button class="text-text-secondary hover:text-primary transition-colors">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Health Tracking -->
+                <section class="card-elevated">
+                    <div class="flex items-center justify-between mb-6">
+                        <h2 class="text-xl font-semibold text-text-primary">Health Tracking</h2>
+                        <button class="text-primary hover:text-primary-700 text-sm font-medium transition-colors">View Trends</button>
+                    </div>
+
+                    <!-- Vital Signs Chart -->
+                    <div class="bg-white rounded-lg p-6 border border-border-light mb-6">
+                        <h3 class="font-semibold text-text-primary mb-4">Blood Pressure Trends</h3>
+                        <div class="h-48 bg-surface rounded-lg flex items-center justify-center">
+                            <svg class="w-full h-full" viewBox="0 0 400 200" aria-label="Blood pressure trend chart">
+                                <!-- Chart Grid -->
+                                <defs>
+                                    <pattern id="grid" width="40" height="20" patternUnits="userSpaceOnUse">
+                                        <path d="M 40 0 L 0 0 0 20" fill="none" stroke="#E5E7EB" stroke-width="1"/>
+                                    </pattern>
+                                </defs>
+                                <rect width="400" height="200" fill="url(#grid)"/>
+                                
+                                <!-- Systolic Line -->
+                                <polyline fill="none" stroke="#2563EB" stroke-width="3" points="40,120 80,110 120,115 160,105 200,100 240,95 280,90 320,85 360,80"/>
+                                
+                                <!-- Diastolic Line -->
+                                <polyline fill="none" stroke="#10B981" stroke-width="3" points="40,160 80,155 120,158 160,150 200,145 240,140 280,135 320,130 360,125"/>
+                                
+                                <!-- Data Points -->
+                                <circle cx="40" cy="120" r="4" fill="#2563EB"/>
+                                <circle cx="120" cy="115" r="4" fill="#2563EB"/>
+                                <circle cx="200" cy="100" r="4" fill="#2563EB"/>
+                                <circle cx="280" cy="90" r="4" fill="#2563EB"/>
+                                <circle cx="360" cy="80" r="4" fill="#2563EB"/>
+                                
+                                <circle cx="40" cy="160" r="4" fill="#10B981"/>
+                                <circle cx="120" cy="158" r="4" fill="#10B981"/>
+                                <circle cx="200" cy="145" r="4" fill="#10B981"/>
+                                <circle cx="280" cy="135" r="4" fill="#10B981"/>
+                                <circle cx="360" cy="125" r="4" fill="#10B981"/>
+                            </svg>
+                        </div>
+                        <div class="flex items-center justify-center space-x-6 mt-4">
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 bg-primary rounded-full mr-2"></div>
+                                <span class="text-sm text-text-secondary">Systolic</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 bg-success rounded-full mr-2"></div>
+                                <span class="text-sm text-text-secondary">Diastolic</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Health Metrics Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div class="bg-white rounded-lg p-4 border border-border-light text-center">
+                            <div class="text-2xl font-bold text-primary">120/80</div>
+                            <div class="text-text-secondary text-sm">Blood Pressure</div>
+                            <div class="text-success text-xs mt-1">Normal</div>
+                        </div>
+                        <div class="bg-white rounded-lg p-4 border border-border-light text-center">
+                            <div class="text-2xl font-bold text-success">72</div>
+                            <div class="text-text-secondary text-sm">Heart Rate</div>
+                            <div class="text-success text-xs mt-1">Good</div>
+                        </div>
+                        <div class="bg-white rounded-lg p-4 border border-border-light text-center">
+                            <div class="text-2xl font-bold text-accent">98.6°F</div>
+                            <div class="text-text-secondary text-sm">Temperature</div>
+                            <div class="text-success text-xs mt-1">Normal</div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Right Column - Prescriptions & Quick Actions -->
+            <div class="space-y-8">
+                <!-- Prescription Management -->
+                <section class="card-elevated">
+                    <div class="flex items-center justify-between mb-6">
+                        <h2 class="text-xl font-semibold text-text-primary">Prescriptions</h2>
+                        <button class="text-primary hover:text-primary-700 text-sm font-medium transition-colors">Manage All</button>
+                    </div>
+
+                    <div class="space-y-4">
+                        <!-- Prescription Item -->
+                        <div class="bg-white rounded-lg p-4 border border-border-light">
+                            <div class="flex items-start justify-between mb-3">
+                                <div>
+                                    <h3 class="font-semibold text-text-primary">Lisinopril 10mg</h3>
+                                    <p class="text-text-secondary text-sm">Once daily • Dr. Sarah Johnson</p>
+                                </div>
+                                <span class="bg-warning-100 text-warning px-2 py-1 rounded-full text-xs font-medium">Refill Due</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div class="text-sm text-text-secondary">
+                                    <span>15 pills remaining</span>
+                                </div>
+                                <button class="text-primary hover:text-primary-700 text-sm font-medium transition-colors">Request Refill</button>
+                            </div>
+                        </div>
+
+                        <!-- Prescription Item -->
+                        <div class="bg-white rounded-lg p-4 border border-border-light">
+                            <div class="flex items-start justify-between mb-3">
+                                <div>
+                                    <h3 class="font-semibold text-text-primary">Metformin 500mg</h3>
+                                    <p class="text-text-secondary text-sm">Twice daily • Dr. Michael Chen</p>
+                                </div>
+                                <span class="bg-success-100 text-success px-2 py-1 rounded-full text-xs font-medium">Active</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div class="text-sm text-text-secondary">
+                                    <span>45 pills remaining</span>
+                                </div>
+                                <button class="text-text-secondary hover:text-primary text-sm font-medium transition-colors">View Details</button>
+                            </div>
+                        </div>
+
+                        <!-- Prescription Item -->
+                        <div class="bg-white rounded-lg p-4 border border-border-light">
+                            <div class="flex items-start justify-between mb-3">
+                                <div>
+                                    <h3 class="font-semibold text-text-primary">Vitamin D3 1000IU</h3>
+                                    <p class="text-text-secondary text-sm">Once daily • Dr. Emily Rodriguez</p>
+                                </div>
+                                <span class="bg-success-100 text-success px-2 py-1 rounded-full text-xs font-medium">Active</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div class="text-sm text-text-secondary">
+                                    <span>60 pills remaining</span>
+                                </div>
+                                <button class="text-text-secondary hover:text-primary text-sm font-medium transition-colors">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pharmacy Information -->
+                    <div class="mt-6 p-4 bg-surface rounded-lg">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <h4 class="font-semibold text-text-primary">Preferred Pharmacy</h4>
+                                <p class="text-text-secondary text-sm">CVS Pharmacy - Main Street</p>
+                                <p class="text-text-secondary text-sm">(555) 123-4567</p>
+                            </div>
+                            <button class="text-primary hover:text-primary-700 text-sm font-medium transition-colors">Change</button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Family Health Management -->
+                <section class="card-elevated">
+                    <div class="flex items-center justify-between mb-6">
+                        <h2 class="text-xl font-semibold text-text-primary">Family Health</h2>
+                        <button class="text-primary hover:text-primary-700 text-sm font-medium transition-colors">Add Member</button>
+                    </div>
+
+                    <div class="space-y-4">
+                        <!-- Family Member -->
+                        <div class="flex items-center p-4 bg-white rounded-lg border border-border-light hover:shadow-md transition-shadow">
+                            <img src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Emma Johnson" class="w-12 h-12 rounded-full object-cover mr-4" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                            <div class="flex-1">
+                                <h3 class="font-semibold text-text-primary">Emma Johnson</h3>
+                                <p class="text-text-secondary text-sm">Daughter • Age 8</p>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <span class="bg-success-100 text-success px-2 py-1 rounded-full text-xs">Healthy</span>
+                                <button class="text-text-secondary hover:text-primary transition-colors">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Family Member -->
+                        <div class="flex items-center p-4 bg-white rounded-lg border border-border-light hover:shadow-md transition-shadow">
+                            <img src="https://images.pixabay.com/photo/2016/11/21/12/42/beard-1845166_1280.jpg" alt="David Johnson" class="w-12 h-12 rounded-full object-cover mr-4" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                            <div class="flex-1">
+                                <h3 class="font-semibold text-text-primary">David Johnson</h3>
+                                <p class="text-text-secondary text-sm">Spouse • Age 42</p>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <span class="bg-warning-100 text-warning px-2 py-1 rounded-full text-xs">Checkup Due</span>
+                                <button class="text-text-secondary hover:text-primary transition-colors">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Quick Actions -->
+                <section class="card-elevated">
+                    <h2 class="text-xl font-semibold text-text-primary mb-6">Quick Actions</h2>
+                    
+                    <div class="space-y-3">
+                        <a href="appointment_management_dashboard.html" class="flex items-center p-3 bg-white rounded-lg border border-border-light hover:shadow-md transition-shadow">
+                            <div class="bg-primary-50 rounded-lg w-10 h-10 flex items-center justify-center mr-3">
+                                <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                                </svg>
+                            </div>
+                            <span class="font-medium text-text-primary">Book Appointment</span>
+                        </a>
+
+                        <a href="telemedicine_center.html" class="flex items-center p-3 bg-white rounded-lg border border-border-light hover:shadow-md transition-shadow">
+                            <div class="bg-success-50 rounded-lg w-10 h-10 flex items-center justify-center mr-3">
+                                <svg class="w-5 h-5 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+                                </svg>
+                            </div>
+                            <span class="font-medium text-text-primary">Start Video Call</span>
+                        </a>
+
+                        <button class="flex items-center p-3 bg-white rounded-lg border border-border-light hover:shadow-md transition-shadow w-full">
+                            <div class="bg-accent-50 rounded-lg w-10 h-10 flex items-center justify-center mr-3">
+                                <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
+                                </svg>
+                            </div>
+                            <span class="font-medium text-text-primary">Symptom Checker</span>
+                        </button>
+
+                        <a href="payment_insurance_hub.html" class="flex items-center p-3 bg-white rounded-lg border border-border-light hover:shadow-md transition-shadow">
+                            <div class="bg-secondary-50 rounded-lg w-10 h-10 flex items-center justify-center mr-3">
+                                <svg class="w-5 h-5 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/>
+                                </svg>
+                            </div>
+                            <span class="font-medium text-text-primary">View Bills</span>
+                        
+                    </a></div>
+                </section>
+
+                <!-- Health Alerts -->
+                <section class="card-elevated">
+                    <h2 class="text-xl font-semibold text-text-primary mb-6">Health Alerts</h2>
+                    
+                    <div class="space-y-4">
+                        <!-- Alert Item -->
+                        <div class="flex items-start p-4 bg-error-50 rounded-lg border border-error-100">
+                            <div class="bg-error rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-0.5">
+                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="font-semibold text-error">Lab Results Available</h3>
+                                <p class="text-error text-sm mt-1">Your cholesterol panel results are ready for review. Please contact your doctor.</p>
+                                <button class="text-error font-medium text-sm mt-2 hover:text-error-600 transition-colors">View Results</button>
+                            </div>
+                        </div>
+
+                        <!-- Alert Item -->
+                        <div class="flex items-start p-4 bg-warning-50 rounded-lg border border-warning-100">
+                            <div class="bg-warning rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-0.5">
+                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="font-semibold text-warning">Annual Checkup Due</h3>
+                                <p class="text-warning text-sm mt-1">It's time for your annual physical examination. Schedule your appointment today.</p>
+                                <button class="text-warning font-medium text-sm mt-2 hover:text-warning-600 transition-colors">Schedule Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-text-primary text-white py-16 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <svg class="h-8 w-8 text-primary" viewBox="0 0 32 32" fill="currentColor">
+                            <path d="M16 2C8.268 2 2 8.268 2 16s6.268 14 14 14 14-6.268 14-14S23.732 2 16 2zm0 6c1.105 0 2 .895 2 2s-.895 2-2 2-2-.895-2-2 .895-2 2-2zm4 16h-8v-2h2v-6h-2v-2h6v8h2v2z"/>
+                        </svg>
+                        <span class="ml-3 text-xl font-bold">MediChannel Pro</span>
+                    </div>
+                    <p class="text-gray-300 mb-6 max-w-md">
+                        Transforming healthcare access through intelligent technology. Your trusted partner in health journey management.
+                    </p>
+                    <div class="flex space-x-4">
+                        <button class="bg-primary-600 hover:bg-primary-700 p-2 rounded-full transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M20 10c0-5.523-4.477-10-10-10S0 4.477 0 10c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V10h2.54V7.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V10h2.773l-.443 2.89h-2.33v6.988C16.343 19.128 20 14.991 20 10z" clip-rule="evenodd"/>
+                            </svg>
+                        </button>
+                        <button class="bg-primary-600 hover:bg-primary-700 p-2 rounded-full transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84"/>
+                            </svg>
+                        </button>
+                        <button class="bg-primary-600 hover:bg-primary-700 p-2 rounded-full transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="provider_search_directory.html" class="text-gray-300 hover:text-white transition-colors">Find Doctors</a></li>
+                        <li><a href="appointment_management_dashboard.html" class="text-gray-300 hover:text-white transition-colors">Book Appointment</a></li>
+                        <li><a href="telemedicine_center.html" class="text-gray-300 hover:text-white transition-colors">Telemedicine</a></li>
+                        <li><a href="patient_health_portal.html" class="text-gray-300 hover:text-white transition-colors">Health Records</a></li>
+                        <li><a href="payment_insurance_hub.html" class="text-gray-300 hover:text-white transition-colors">Billing & Insurance</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Support</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Help Center</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Contact Us</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Terms of Service</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">HIPAA Compliance</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center">
+                <p class="text-gray-300">© 2025 MediChannel Pro. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+<script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+</body>
+</html>

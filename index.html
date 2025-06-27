@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MediChannel Pro - Healthcare Platform</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fmedichanne1692back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.5"></script>
+</head>
+<body class="bg-background text-text-primary font-inter">
+    <div class="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-50 to-surface">
+        <div class="max-w-md w-full mx-4">
+            <div class="card-elevated text-center">
+                <div class="mb-8">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                        </svg>
+                    </div>
+                    <h1 class="text-2xl font-bold text-primary mb-2">MediChannel Pro</h1>
+                    <p class="text-text-secondary">Healthcare Platform</p>
+                </div>
+                
+                <div class="space-y-3 mb-8">
+                    <button onclick="redirectTo('homepage_healthcare_platform.html')" class="btn-primary w-full">
+                        Healthcare Homepage
+                    </button>
+                    <button onclick="redirectTo('provider_search_directory.html')" class="btn-secondary w-full">
+                        Provider Directory
+                    </button>
+                    <button onclick="redirectTo('appointment_management_dashboard.html')" class="btn-primary w-full">
+                        Appointment Dashboard
+                    </button>
+                    <button onclick="redirectTo('patient_health_portal.html')" class="btn-secondary w-full">
+                        Patient Portal
+                    </button>
+                    <button onclick="redirectTo('telemedicine_center.html')" class="btn-accent w-full">
+                        Telemedicine Center
+                    </button>
+                    <button onclick="redirectTo('payment_insurance_hub.html')" class="btn-primary w-full">
+                        Payment & Insurance Hub
+                    </button>
+                </div>
+                
+                <div class="text-sm text-text-secondary">
+                    <p>Select a page to navigate to the healthcare platform</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function redirectTo(pageName) {
+            // Add a smooth transition effect
+            document.body.style.opacity = '0.7';
+            document.body.style.transition = 'opacity 300ms ease-in-out';
+            
+            // Redirect after a brief delay for visual feedback
+            setTimeout(() => {
+                window.location.href = `pages/${pageName}`;
+            }, 200);
+        }
+
+        // Add hover effects to buttons
+        document.addEventListener('DOMContentLoaded', function() {
+            const buttons = document.querySelectorAll('button');
+            buttons.forEach(button => {
+                button.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-1px)';
+                    this.style.transition = 'transform 200ms ease-in-out';
+                });
+                
+                button.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+        });
+    </script>
+<script id="dhws-dataInjector" src="/public/dhws-data-injector.js"></script>
+</body>
+</html>
